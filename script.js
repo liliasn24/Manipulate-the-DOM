@@ -17,23 +17,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener
 
   // Part 1
-const title = document.getElementById('main-title');
-title.textContent = 'Welcome';
+const changeTitle = function() {
+  const title = document.getElementById('main-title');
+  title.textContent = 'Welcome';
+}
+changeTitle();
+
 
   // Part 2
+const changeColor = function() {
+  const body = document.querySelector('body');
+  body.style.backgroundColor = 'Green';
+}
+changeColor();
 
-const body = document.querySelector('body');
-body.style.backgroundColor = 'Purple';
   // Part 3
-
-const favList = document.getElementById('favorite-things');
-favList.removeChild(favList.childNodes[11]);
+const deleteLi = function() {
+  const ul = document.querySelector('ul');
+  const lastLi = ul.children[5];
+  lastLi.remove();
+}
+deleteLi();
 
   // Part 4
- const specialTitle = document.querySelector('.special-title');
- specialTitle.style.fontSize = '2rem';
+const changeFont = function() {
+  const specialTitle = document.querySelectorAll('.special-title');
+  console.log(specialTitle);
+  for(let i = 0; i <specialTitle.length; i++){
+    specialTitle[i].style.fontSize = '2rem';
+  }
+}
+changeFont();
 
   // Part 5
+
+const deleteRace = function() {
+  const races = document.getElementById('past-races');
+  console.log(races);
+  const removeChicago = races.children[3];
+  removeChicago.remove();
+}
+deleteRace();
+
 
   // Part 6
 
